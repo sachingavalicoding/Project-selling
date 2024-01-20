@@ -1,16 +1,19 @@
 // components/SignUp.js
 import { useState, } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { ID } from 'appwrite';
 const Signup = () => {
+    const { signUp } = useAuth();
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSignUp = async () => {
-        // await signUp(email, password);
-        // Redirect or perform additional actions after registration and login
-        console.log(" Ho gaya Sign up");
+        await signUp(ID.unique(), email, password, name);
+        navigate("/signin");
     };
 
     return (
@@ -61,6 +64,8 @@ const Signup = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="********"
                             required
+                            min={8}
+                            max={30}
                         />
                     </div>
                     <button

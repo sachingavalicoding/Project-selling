@@ -23,14 +23,14 @@ const Contact = () => {
         });
         setErrors({
             ...errors,
-            [name]: '' // Clear error when user starts typing
+            [name]: ''
         });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Validate form fields
+
         let hasErrors = false;
 
         if (formData.name.trim() === '') {

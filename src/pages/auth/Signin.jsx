@@ -1,14 +1,16 @@
 // components/SignIn.js
 import { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const { signIn } = useAuth();
+    const navigate = useNavigate();
     const handleSignIn = async () => {
-        // await login(email, password);
-        // Redirect or perform additional actions after login
+        await signIn(email, password);
+        navigate("/");
     };
 
     return (

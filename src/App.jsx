@@ -1,8 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AddProjects, Contact, Home, Profile, Projects, Signin, Signup } from "./pages/index";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
@@ -15,6 +18,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
 
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
