@@ -38,10 +38,10 @@ const Navbar = () => {
                         <Link to={"/"} className="">
                             <FaHome className="inline-block mr-2" /> Home
                         </Link>
-                        <Link to={"/products"} className="">
+                        <Link to={"/projects"} className="">
                             <FaCube className="inline-block mr-2" /> Products
                         </Link>
-                        <Link to={"/addproducts"} className="">
+                        <Link to={"/addprojects"} className="">
                             <FaInfo className="inline-block mr-2" /> Add Products
                         </Link>
                         <Link to={"/contact"} className="text-white block hover:text-gray-300 transition duration-300">

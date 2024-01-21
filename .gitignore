@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+     // Upload imageUrl and project zip to Appwrite storage
+            const imageUrlFile = new File([projectData.imageUrl], 'project-imageUrl.jpg', { type: 'imageUrl/jpeg' });
+            const zipFile = new File([projectData.zipUrl], 'project-source.zip', { type: 'application/zip' });
+
+            const [imageUrlUploadResponse, zipUploadResponse] = await Promise.all([
+                storage.createFile('65aca0f0049956fc0b10', imageUrlFile),
+                storage.createFile('65ad1292f1fe82f61575', zipFile),
+            ]);

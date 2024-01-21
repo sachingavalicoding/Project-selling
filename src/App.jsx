@@ -10,7 +10,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/addproject" element={<AddProjects />} />
+        <Route path="/addprojects" element={<AddProjects />} />
         <Route path="/projects" element={<Projects />} />
 
         {/*  auth */}

@@ -1,8 +1,13 @@
 
-
 const Projects = () => {
     return (
-        <div>Projects</div>
+        <div className="w-full min-h-screen bg-gray-600">
+            <div className="container mx-auto">
+                <section>
+                    hwl
+                </section>
+            </div>
+        </div>
     )
 }
 
