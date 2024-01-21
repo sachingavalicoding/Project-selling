@@ -6,4 +6,7 @@
   a {
     @apply text-white block mb-4 hover:text-gray-300 transition duration-300;
   }
+  * {
+    @apply font-pop;
+  }
 }

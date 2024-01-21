@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <nav className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="text-white font-bold text-lg">Sachin Gavali </div>
+                <div className="text-white font-normal text-lg">Sachin Gavali </div>
 
                 {/* Mobile menu button */}
                 <div className="block">
@@ -30,7 +30,7 @@ const Navbar = () => {
 
                 {/* Mobile menu */}
                 <div
-                    className={`fixed top-[3.7rem] right-0 h-full w-64 bg-indigo-700 z-50 overflow-y-auto transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                    className={`fixed top-[3.7rem] right-0 h-full w-64 shadow-lg bg-indigo-700  z-50 overflow-y-auto transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                         } transition-transform duration-300 ease-in-out`}
                 >
                     <div className="p-4">
